@@ -3,6 +3,7 @@ package com.example.eider.carpoolinguniversitario;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.login.widget.LoginButton;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         if (AccessToken.getCurrentAccessToken() == null){
             goLoginScree();
         }
+
 
     }
 
