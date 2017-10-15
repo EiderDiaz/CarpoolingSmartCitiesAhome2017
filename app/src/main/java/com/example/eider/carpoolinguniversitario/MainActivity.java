@@ -19,6 +19,10 @@ import com.example.eider.carpoolinguniversitario.Fragmentos.OneFragment;
 import com.example.eider.carpoolinguniversitario.Fragmentos.ThreeFragment;
 import com.example.eider.carpoolinguniversitario.Fragmentos.TwoFragment;
 import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
+import com.facebook.login.LoginManager;
 import com.facebook.login.widget.LoginButton;
 
 import java.util.ArrayList;
@@ -53,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
             tabLayout = (TabLayout) findViewById(R.id.tabs);
             tabLayout.setupWithViewPager(viewPager);
             setupTabIcons();
+            Bundle bundle=getIntent().getBundleExtra("paketaxoFacebook");
+            Toast.makeText(this, "nombre:"+bundle.getString("first_name")+" "+bundle.getString("last_name"), Toast.LENGTH_SHORT).show();
         }
 
 
@@ -71,8 +77,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new TwoFragment(), "Publicar");
         adapter.addFragment(new ThreeFragment(), "Buscar");
         adapter.addFragment(new FourFragemnt(), "Perfil");
-
-
         viewPager.setAdapter(adapter);
     }
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -113,4 +117,5 @@ public class MainActivity extends AppCompatActivity {
     public void Logout(){
         goLoginScree();
     }
+
 }
