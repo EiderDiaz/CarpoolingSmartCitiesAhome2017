@@ -55,7 +55,6 @@ public class OneFragment extends Fragment {
         });
 
         return mview;
-
     }
 
     public void disconnectFromFacebook() {
