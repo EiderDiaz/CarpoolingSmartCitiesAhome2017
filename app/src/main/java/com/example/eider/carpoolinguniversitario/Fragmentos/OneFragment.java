@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class OneFragment extends Fragment {
 
-   /* private ArrayList<DatosViaje> listaReporte;
-    private AdaptadorReporte ReporteAdapter;
+    private ArrayList<DatosViaje> listaReporte;
+    /*private AdaptadorReporte ReporteAdapter;
     private RecyclerView recyclerView;
     AdminSQLiteOpenHelper admin;*/
 
